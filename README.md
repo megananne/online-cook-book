@@ -121,90 +121,102 @@ https://mlab.com/welcome/
 3.	Verify the ‘required fields’ alert pops up. 
 4.	Now enter all correct information but in the ingredients input, input an integer not a string and verify an ‘error’ message appears and does not let you submit the form.
 
-i.	When on the ‘Add Recipe’ page, enter all inputs correctly but leave the ‘star rating’ input on ‘0’. 
-ii.	Press the ‘Save Changes’ button and verify the star ratings is what you entered. 
-iii.	Verify all fields have correct inputs.
+1.	When on the ‘Add Recipe’ page, enter all inputs correctly but leave the ‘star rating’ input on ‘0’. 
+2.	Press the ‘Save Changes’ button and verify the star ratings is what you entered. 
+3.	Verify all fields have correct inputs.
 
-i.	When on the ‘Add Recipe’ page, click on the ‘section name’ drop down and choose a section name.
-ii.	Enter all information in the form correctly and click the ‘Add Recipe’ button at the bottom of the form. 
-iii.	Verify the drop down has worked and the recipe is now showing the section name you choose. 
+1.	When on the ‘Add Recipe’ page, click on the ‘section name’ drop down and choose a section name.
+2.	Enter all information in the form correctly and click the ‘Add Recipe’ button at the bottom of the form. 
+3.	Verify the drop down has worked and the recipe is now showing the section name you choose. 
 
-i.	When adding a recipe on the ‘Add Recipe’ page, click the tick box to say this recipe has allergies. 
-ii.	Once all information is entered correctly, click the ‘Add Recipe’ button.
-iii.	Verify this redirects you to add another recipe.
-iv.	Now go to the homepage and click the ‘Show Recipes’ button. 
-v.	Verify this redirects you to the ‘All Recipes’ Page.
-vi.	Find the recipe you have just added and verify ‘the recipe has allergies’ is noted.
+1.	When adding a recipe on the ‘Add Recipe’ page, click the tick box to say this recipe has allergies. 
+2.	Once all information is entered correctly, click the ‘Add Recipe’ button.
+3.	Verify this redirects you to add another recipe.
+4.	Now go to the homepage and click the ‘Show Recipes’ button. 
+5.	Verify this redirects you to the ‘All Recipes’ Page.
+6.	Find the recipe you have just added and verify ‘the recipe has allergies’ is noted.
 
-i.	When adding an image to the recipe you are adding on the ‘Add Recipe’ page, you need to copy the image’s URL from the internet and paste it into the ‘IMGURL’ section.
-ii.	Once all information is correct, press the ‘Add Recipe’ button. 
-iii.	Verify this has now redirected you to add another a recipe.
-iv.	Click on the homepage, then the ‘Show Recipes’ button.
-v.	Verify the recipe you have just added is there, along with the image you attached to the recipe.
+1.	When adding an image to the recipe you are adding on the ‘Add Recipe’ page, you need to copy the image’s URL from the internet and paste it into the ‘IMGURL’ section.
+2.	Once all information is correct, press the ‘Add Recipe’ button. 
+3.	Verify this has now redirected you to add another a recipe.
+4.	Click on the homepage, then the ‘Show Recipes’ button.
+5.	Verify the recipe you have just added is there, along with the image you attached to the recipe.
 
 ### Edit a recipe
 
-i.	When on the homepage, click on the ‘Show Recipes’ button under the home image.
-ii.	Once the button has been clicked, you should be redirected to the ‘All Recipes’ page. 
-iii.	Verify there is a list of different recipes.
-iv.	Verify you can click on each recipe and see all the recipe details.
-v.	Click on the ‘Edit Recipe’ button and verify you can now edit the recipe.
-vi.	Change one of the input fields and press the ‘Save Changes’ button.
-vii.	Verify the recipe has now been changed.
+1.	When on the homepage, click on the ‘Show Recipes’ button under the home image.
+2.	Once the button has been clicked, you should be redirected to the ‘All Recipes’ page. 
+3.	Verify there is a list of different recipes.
+4.	Verify you can click on each recipe and see all the recipe details.
+5.	Click on the ‘Edit Recipe’ button and verify you can now edit the recipe.
+6.	Change one of the input fields and press the ‘Save Changes’ button.
+7.	Verify the recipe has now been changed.
 
-i.	When on the ‘All Recipes’ page, click on a recipe and click the ‘Edit Recipe’ button.
-ii.	On the ‘Section Name’ part of the edit recipe form, change the drop down to a different section name and press the ‘Save Changes’ button. 
-iii.	On the navbar, click on the ‘Sections’ drop down and click on the section name you just changed the recipe to.
-iv.	Verify this has redirected you to the specific section page.
-v.	Now Verify the recipe you just edited is listed.
+1.	When on the ‘All Recipes’ page, click on a recipe and click the ‘Edit Recipe’ button.
+2.	On the ‘Section Name’ part of the edit recipe form, change the drop down to a different section name and press the ‘Save Changes’ button. 
+3.	On the navbar, click on the ‘Sections’ drop down and click on the section name you just changed the recipe to.
+4.	Verify this has redirected you to the specific section page.
+5.	Now Verify the recipe you just edited is listed.
 
 ### Search by ingredients
 
-i.	When on the homepage, enter an ingredient in to the search bar and press the search button. (e.g. ‘Meat’)
-ii.	Once pressed search, check you have a lists of results.
-iii.Once the list of results are showing, check all recipes have the ingredient in them.
-iv.	Verify there is no recipes listed that do not include ‘Meat’.
+1.	When on the homepage, enter an ingredient in to the search bar and press the search button. (e.g. ‘Meat’)
+2.	Once pressed search, check you have a lists of results.
+3.  Once the list of results are showing, check all recipes have the ingredient in them.
+4.	Verify there is no recipes listed that do not include ‘Meat’.
 
-i.	When on the homepage, enter an integer in to the search bar and click the search button.
-ii.	Once the search button has been clicked, verify an error message has now appeared.
-iii.	Verify no results of recipes are showing.
+1.	When on the homepage, enter an integer in to the search bar and click the search button.
+2.	Once the search button has been clicked, verify an error message has now appeared.
+3.	Verify no results of recipes are showing.
 
-i.	When on the homepage, enter a string which is not an ingredient in to the search bar and then click the search button. (e.g. ‘Cat’)
-ii.	Once pressed the search button, verify an error message has now appeared.
-iii.	Verify no results of recipes are showing.
+1.	When on the homepage, enter a string which is not an ingredient in to the search bar and then click the search button. (e.g. ‘Cat’)
+2.	Once pressed the search button, verify an error message has now appeared.
+3.	Verify no results of recipes are showing.
 
-i.	When on the homepage, enter several ingredients into the search bar and press the search button. (e.g. ‘Meat Fish Pepper Onions’)
-ii.	Once pressed the search button, verify all recipes that include the searched ingredients are listed below.
-iii.	Verify no recipes are showing that do not include one of the ingredients searched.
+1.	When on the homepage, enter several ingredients into the search bar and press the search button. (e.g. ‘Meat Fish Pepper Onions’)
+2.	Once pressed the search button, verify all recipes that include the searched ingredients are listed below.
+3.	Verify no recipes are showing that do not include one of the ingredients searched.
 
 ### Navigating through the dropdown section on the navbar
 
-i.	When on the homepage, click on the ‘Sections’ drop down and select one section.
-ii.	Verify this has redirected you to the specific section page. 
-iii.	Verify all recipes are ‘Meat and Poultry’ in the ‘Meat and Poultry’ section.
-iv.	Click on each section in the drop down and verify for each.
-v.	Verify there are no recipes in the wrong sections.
+1.	When on the homepage, click on the ‘Sections’ drop down and select one section.
+2.	Verify this has redirected you to the specific section page. 
+3.	Verify all recipes are ‘Meat and Poultry’ in the ‘Meat and Poultry’ section.
+4.	Click on each section in the drop down and verify for each.
+5.	Verify there are no recipes in the wrong sections.
 
 ### Buttons
 
-i.	Click on the ‘Show Recipes’ button on the ‘Homepage’.
-ii.	Verify it redirects you to the ‘All Recipes’ page.
+1.	Click on the ‘Show Recipes’ button on the ‘Homepage’.
+2.	Verify it redirects you to the ‘All Recipes’ page.
 
-i.	Once entered all correct information click on the ‘Add Recipe’ button on the ‘Add Recipes’ page.
-ii.	Verify it adds the recipe to the website.
+1.	Once entered all correct information click on the ‘Add Recipe’ button on the ‘Add Recipes’ page.
+2.	Verify it adds the recipe to the website.
 
-i.	Input an ingredient into the search bar and click on the search button on the ‘Homepage’.
-ii.	Verify it searches the website for the recipes including the ingredient you searched for and displays the recipes in another screen.
+1.	Input an ingredient into the search bar and click on the search button on the ‘Homepage’.
+2.	Verify it searches the website for the recipes including the ingredient you searched for and displays the recipes in another screen.
 
-i.	Once entered all correct information, click on the ‘Edit Recipe’ button on the ‘Edit Recipe’ page.
-ii.	Verify the recipe has been updated with the new information.
+1.	Once entered all correct information, click on the ‘Edit Recipe’ button on the ‘Edit Recipe’ page.
+2.	Verify the recipe has been updated with the new information.
 
-i.	On the right side of the navbar, there is the home button which is the knife and fork icon. When on a different page, click on the homepage button.
-ii.	Verify this redirects you to the homepage.
+1.	On the right side of the navbar, there is the home button which is the knife and fork icon. When on a different page, click on the homepage button.
+2.	Verify this redirects you to the homepage.
 
 ### Responsiveness
 
 #### Bugs/Errors
+
+One of the main issues i am having at the minute is not being able to add CSS to some of the materialize forms. There is a default colour on materialize and it comes up when you hover over parts of the
+form. I want to sort this out so the hover colours are not the default colours. The colours should be one of the colours from the colour scheme i choose for the website. I also want to change the font of
+some of the text on the form as some of it i have designed with CSS but again i am struggling to change it due to the materialize defaults.
+
+One of the other design issues i am having is the margins of the forms on the 'all recipes' page. I had all the text in the center, on one line but for some reason they have moved to the side slightly. 
+This is something i will be fixing before submitting.
+
+On the 'Edit Recipe' and 'Add Recipe' pages, i use a dropdown in the form for the section name. On the 'Edit Recipe' page, when clicking on the dropdown it does not work, also there is no text in the text box
+of the dropdown. This needs fixing before submitting so the user has the option to keep the section name for the recipe or choose a different section from the dropdown.
+
+At the moment the search button does not work. The search bar does not redirect you to a results page.
 
 
 ## Deployment

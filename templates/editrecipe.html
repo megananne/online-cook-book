@@ -1,22 +1,19 @@
-{% extends 'base.html'%}
-
-{% block content %}
+{% extends 'base.html'%} {% block content %}
 <div class="row headingtxt">
-<h3>Edit Recipe</h3>
+    <h3>Edit Recipe</h3>
 </div>
 <div class="row">
     <form action="{{ url_for('changerecipe', recipeid=recipe._id) }}" method="POST" class="col s12" style="color: white;">
         <div class="row">
             <div class="input-field col s12">
-                <span class="material-icons prefix">room_service</span>               
+                <span class="material-icons prefix">room_service</span>
                 <select style="color=white;" id="section" name="sectionname">
                     {% for section in sections %}
                         <option value="{{section.sectionname}}"
-                                {% if section.sectionname == section.sectionname %} selected {% endif %}
-                            >{{section.sectionname}}</option>
+                                {% if section.sectionname == recipe.sectionname %} selected {% endif %}>
+                            {{section.sectionname}}</option>
                     {% endfor %}
                 </select>
-                
             </div>
         </div>
         <div class="row">
@@ -41,46 +38,41 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">image</i>
-                <input id="imgurl" name="imgurl" type="text" class="validate" value="{{recipe.imgurl}}">
-                <label for="icon_prefix">Image URL</label>
-            </div>
-        </div> 
-            <div class="row">
-                <select id="stars" name="stars">
-                    <i class="material-icons prefix">grade</i>
-                    <option value="" disabled selected>Rate Dish</option>
-                    {% for i in range(6) %}
-                    <option value="{{i}}">{{i}}</option>
-                    {% endfor %}
-                    <label for="icon_prefix">Image URL</label>
-                </select>
-            </div>
-  
-        
-        
-
-    
-
-                <i class="material-icons prefix">info</i>
-         <div class="tooltip">This meal could contain allergies.
-  <span class="tooltiptext">Please be advised that some of the recipes included in this cookbook may contain these ingredients: Milk, Eggs, Wheat, Soybeans, Peanuts, Tree Nuts, Fish and ShellFish</span>
-</div>
-             
-            
-            
-     
-        </div> 
+        <div class="input-field col s12">
+            <i class="material-icons prefix">image</i>
+            <input id="imgurl" name="imgurl" type="text" class="validate" value="{{recipe.imgurl}}">
+            <label for="icon_prefix">Image URL</label>
+        </div>
+        </div>
         <div class="row">
-            <button class="waves-effect  btn savechangesbtn" type="submit" name="action">Save Changes
+        <div class="input-field col s12">
+        <i class="material-icons prefix">grade</i>
+        <select id="stars" name="stars">
+            <option value="" disabled selected>Rate Dish</option>
+                {% for i in range(6) %}
+                <option value="{{i}}">{{i}}</option>
+                {% endfor %}
+                    <label for="icon_prefix">Image URL</label>
+        </select>
+        </div>
+        </div>
+        <div class="row">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">info</i>
+            <div class="tooltip">This meal could contain allergies.
+            <span class="tooltiptext">Please be advised that some of the recipes included in this cookbook may contain these ingredients: Milk, Eggs, Wheat, Soybeans, Peanuts, Tree Nuts, Fish and ShellFish</span>
+        </div>
+        </div>
+</div>
+</div>
+<div class="row">
+    <button class="waves-effect  btn savechangesbtn" type="submit" name="action">Save Changes
                 
              </button>
-        </div>
-        <div class="row">
-            
-        </div>
-    </form>
+</div>
+<div class="row">
+
+</div>
+</form>
 </div>
 {% endblock %}
-

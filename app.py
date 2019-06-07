@@ -45,6 +45,15 @@ def editrecipe(recipeid):
         'editrecipe.html', recipe=therecipe, sections=allsections)
 
 
+
+
+
+
+
+
+
+
+
 @app.route('/changerecipe/<recipeid>', methods=['POST'])
 def changerecipe(recipeid):
     mongo.db.recipes.update(
@@ -109,6 +118,7 @@ def search(sectionname):
 
 @app.route('/searchresults/<recipeingredients>', methods=['POST'])
 def searchresults(recipeingredients):
+    recipeingredients=request.form.to_dict()
     return render_template("results.html", ingredients=mongo.db.sections.find(), recipes=mongo.db.recipes.find({"recipeingredients": recipeingredients}),recipeingredients=recipeingredients)    
 
 if __name__ == '__main__':

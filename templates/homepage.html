@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% block content %}
-<html>
-<body>
+
 
 <div class="row homeimage">
     <div class="col offset-s4 material-placeholder">
 <img class="materialboxed initialized" width="450" src="static/images/homeimg2.JPG">
 </div>
-::after
+
 </div>
 <a class="waves-effect  btn showrecipesbtn" href="{{url_for('getrecipes')}}">Show Recipes</a>
 
 
-<div class="row">
-    <div class="col">
-        <i class="material-icons prefix" style="margin-top:55px; color:#db453d;">search</i>
-    </div>
-    <div class="col searchbar">
-        <input type="text" placeholder="Search By Ingredients.." style="margin-bottom: 0px; width: 400px; color: white;">
-    </div>
-</div>
+
 
 <div class=" row recipeofweektext">
 <h4> Recipe of the Week</h4>
 <div class="col-lg-12 recipeofweek">
     
     <img class="materialboxed" width="300" height="300" src="static/images/recipeofweek1.jpg">
-      <div class="panel panel-default">
-
-        </div>    
+   
             
         </div>
         <h4>Mozzarella & Portobello Mushroom Burger</h4>
@@ -37,10 +27,5 @@
 </div>
 
 
-
-
-
-</body>
-</html>
 
 {% endblock %}

@@ -16,7 +16,7 @@ body{
 
 .homeimage{
     margin-top: 40px;
-    margin-left: 20px;
+    margin-left: 0px;
     margin-bottom: 40px;
     border: solid;
     border-width: 5px;
@@ -28,7 +28,7 @@ font-family: 'Pacifico', cursive;
     color:black;
     font-weight: 500;
     font-size: medium;
-    margin-left: 200px;
+    margin-left: 40px;
 }
 
 .recipename{
@@ -270,7 +270,7 @@ input#imgurl:focus {
     font-family: 'Pacifico', cursive;
     color:white;
   
-    width: 500px;
+    width: 310px;
     text-align: center;
     margin-bottom: 40px;
 
@@ -293,7 +293,8 @@ input[type=text]:not(.browser-default){
 
 /* Tooltip container */
 .tooltip {
-    margin-left: 17px;
+    margin-left: 43px;
+    padding-bottom: 10px;
     position: relative;
     display: inline-block;
     border-bottom: 2px solid #db453d; 
@@ -306,6 +307,7 @@ input[type=text]:not(.browser-default){
   background-color: #927d80;
   color: #fff;  
   text-align: center;
+  margin-bottom: 5px;
   padding: 10px;
   border-radius: 6px;
 
@@ -359,3 +361,25 @@ input[type=text]:not(.browser-default){
 }
 
 
+@media screen and (min-width: 550px){
+.recipeofweek {
+    font-family: 'Pacifico', cursive;
+    color: #db453d;
+    background-color: white;
+    width: 310px;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: solid;
+    padding-left: 0px;
+    border-color: #927d80;
+    border-width: 5px;
+}}
+@media screen and (min-width: 550px){
+.recipeofweektext {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin-left: 100px;
+
+}}

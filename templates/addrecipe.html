@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% block content %}
-<html>
-<body style="color:white;">
+
 <div class="row headingtxt">
     <h2>Add Recipe</h2>
 </div>
@@ -49,25 +48,25 @@
                 <label for="icon_prefix">Image URL</label>
             </div>
         </div> 
-            <div class="row">
+            <div class="row"> 
+            <div class="input-field col s12">            
+            <i class="material-icons prefix">grade</i>
                 <select id="stars" name="stars">
-                    <i class="material-icons prefix">grade</i>
+                   
                     <option value="" disabled selected>Rate Dish</option>
                     {% for i in range(6) %}
                     <option value="{{i}}">{{i}}</option>
                     {% endfor %}
                 </select>
             </div>
-        <div class="row allegerncheckbox col s12">
-            <div class="switch">
-                <label style="color: white;">
-                     <h6> This meal could contain allergies, please click on the information button to check allergies.</h6>
-                     <input id="allergens" value="allergies" name="allergens" type="checkbox" class="validate">
-                    <span class="lever fas fa-question-circle fa-2x"></span>
-
-                </label>
             </div>
-        </div>       
+        <div class="row">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">info</i>
+            <div class="tooltip">This meal could contain allergies.
+            <span class="tooltiptext">Please be advised that some of the recipes included in this cookbook may contain these ingredients: Milk, Eggs, Wheat, Soybeans, Peanuts, Tree Nuts, Fish and ShellFish</span>
+        </div>
+        </div> 
         
         <div class="row">
             <button class="btn  addrecipebtn" type="submit" name="action">Add Recipe
@@ -76,8 +75,7 @@
         </div>
     </form>
 </div>
-</body>
-</html>
+
 
 {% endblock %}
 
