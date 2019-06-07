@@ -1,0 +1,361 @@
+body{
+  background-color: #d3a7a0}
+.allegerncheckbox{
+    margin-left: 3rem;}
+
+.showrecipesbtn{
+    font-family: 'Pacifico', cursive;
+    margin-left: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #927d80;}
+    
+.showrecipesbtn:hover{
+    background-color: #db453d;
+}
+
+.homeimage{
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    border: solid;
+    border-width: 5px;
+    border-color: #927d80;
+}
+
+.recipesectionname{
+font-family: 'Pacifico', cursive;
+    color:black;
+    font-weight: 500;
+    font-size: medium;
+    margin-left: 200px;
+}
+
+.recipename{
+font-family: 'Pacifico', cursive;
+    font-size: medium;
+    color: #db453d;
+}
+
+.editrecipebtn{
+    font-family: 'Pacifico', cursive;
+    background-color: #927d80;
+    margin-top:5px;
+    margin-left:150px;
+}
+
+.editrecipebtn:hover{
+    background-color: #db453d;
+
+}
+
+
+.savechangesbtn{
+    font-family: 'Pacifico', cursive;
+    background-color: #927d80;
+    margin-top:5px;
+    margin-left:150px;
+}
+
+.savechangesbtn:hover{
+    background-color: #db453d;
+    margin-left: 150px;
+
+}
+
+.footer{
+    width: 100%;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: #927d80;
+    height: 90px;
+}
+@media screen and (min-width: 550px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.checked {
+  color: orange;
+}
+
+.searchbar{
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+
+
+.restraunticon{
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.nav-wrapper{
+    font-size: 89px;
+    font-family: 'Pacifico', cursive;
+    background-color: #927d80;}
+
+
+.headingtxt{
+  font-family: 'Pacifico', cursive;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+
+.imgurl{
+  float: right;
+  margin-left: 220px;
+  border: 5px solid;
+  position: absolute;
+  border-color: grey;
+  padding: 5px;
+}
+
+
+.expmre{
+  margin-left: 250px;
+
+}
+
+.recipestext{
+  font-family: 'Pacifico', cursive;
+}
+
+
+
+/*addrecipe page*/
+
+.repnme{
+  color: pink;
+}
+
+.addrecipebtn{
+   font-family: 'Pacifico', cursive;
+    margin-left: 200px;
+    background-color: #927d80;
+    
+}
+
+.addrecipebtn:hover{
+  background-color:  #db453d;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #db453d;
+}
+
+
+.infobtn{
+   font-family: 'Pacifico', cursive;
+    margin-left: 200px;
+    background-color: #927d80;
+    
+}
+
+.infobtn:hover{
+  background-color:  #db453d;
+}
+
+
+
+.modal-content{
+    font-size: 18px;
+    font-family: 'Pacifico', cursive;
+    color:white;
+    background-color: #db453d;
+}
+.modal-close{
+    font-family: 'Pacifico', cursive;
+    background-color: #927d80;
+}
+.modal-footer{
+    background-color: yellow;
+}
+.modal-close:hover{
+      font-family: 'Pacifico', cursive;
+      background-color:  #db453d;
+}
+
+.validate{
+    color: white;
+}
+
+.choosesection{
+    color: red;
+}
+
+.input-field label {
+
+color: white; }
+
+.select-wrapper input.select-dropdown {
+
+border-bottom: 1px solid #db453d; }
+
+.select-wrapper input.select-dropdown:focus {
+
+border-bottom: 1px solid #db453d; }
+
+
+
+
+input#recipename {
+    border-bottom: 1px solid #db453d;
+    box-shadow: 0 1px 0 0 #db453d;
+}
+input#recipename:focus {
+    border-bottom: 1px solid #db453d;
+    box-shadow:  0 1px 0 0 #db453d;
+}
+input#ingredients {
+    border-bottom: 1px solid #db453d;
+    box-shadow: 0 1px 0 0 #db453d;
+}
+input#ingredients:focus {
+    border-bottom: 1px solid #db453d;
+    box-shadow:  0 1px 0 0 #db453d;
+}
+input#cooking_time {
+    border-bottom: 1px solid #db453d;
+    box-shadow:  0 1px 0 0 #db453d;
+}
+input#cooking_time:focus {
+    border-bottom: 1px solid #db453d;
+    box-shadow:  0 1px 0 0 #db453d;
+}
+input#imgurl {
+    border-bottom: 1px solid #db453d;
+    box-shadow: 0 1px 0 0 #db453d;
+}
+input#imgurl:focus {
+    border-bottom: 1px solid #db453d;
+    box-shadow: 0 1px 0 0 #db453d;
+}
+
+.material-icons{
+    color:  #927d80;
+}
+
+
+.iconsnav{
+    color: white;
+}
+
+
+.recipeofweek{
+    font-family: 'Pacifico', cursive;
+    color:#db453d;
+    background-color: white;
+    width: 500px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: solid;
+    padding-left: 0px;
+    border-color: #927d80;
+    border-width: 5px;
+}  
+
+.recipeofweektext{
+    font-family: 'Pacifico', cursive;
+    color:white;
+  
+    width: 500px;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+
+
+.dropdown-content li>a, .dropdown-content li>span {
+	color:red;
+	font-family: 'Pacifico', cursive;
+}
+
+}
+input[type=text]:not(.browser-default){
+        border-bottom: 1px solid #db453d;
+    box-shadow: 0 1px 0 0 #db453d;
+}
+
+
+
+/* Tooltip container */
+.tooltip {
+    margin-left: 17px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px solid #db453d; 
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: #927d80;
+  color: #fff;  
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.fa-twitter{
+    margin-left: 5px;
+    color: white;
+    float: right;
+    font-size: 20px;
+}
+.fa-instagram{
+    color: white;
+    float: right;
+    margin-left: 5px;
+    font-size: 20px;
+}
+.fa-facebook{
+    float:right;
+    color: white;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+

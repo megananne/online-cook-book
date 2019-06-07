@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<html>
+<body>
+
+<div class="row headingtxt">
+    <h2>{% if sectionname %}{{ sectionname }} {% else %}All {% endif %}Recipes</h2>
+</div>
+
+
+<div class="row col-md-6">
+    <font size="3">
+    <ul class="collapsible" data-collapsible="accordion">
+        {% for recipe in recipes %}
+        <li>
+            <div class="collapsible-header col-md-6" margin-left="200">
+                <div class="col-md-6">
+                    <form action="{{url_for('deleterecipe', recipeid=recipe._id)}}" method="POST">
+                        <label class="recipesectionname"><strong>{{recipe.sectionname}} - </strong></label>
+                        <label class="recipename">{{recipe.name}} </label><i class="material-icons expmre">expand_more</i>
+                    </form>
+                   
+                </div>
+
+            </div>
+            <div class="collapsible-body recipestext" style="display: block;background-color: white;">
+                <div class="col s2">
+                    <img class="materialboxed imgurl" width="200" border="5" float="right" src="{{recipe.imgurl}}">
+                </div>
+                <br/>
+                <span><h6><strong style="color:  #db453d;">Recipe Name</strong></h6>{{recipe.name}}<h6><strong style="color:  #db453d;"><br><br/>Cooking Time</strong></h6>{{recipe.cooking_time}}<br><br/><h6><strong style="color:  #db453d;">Allergies</strong></h6>{{recipe.allergens}}<br><br/><h6><strong style="color:  #db453d;">Ingredients</strong></h6>{{recipe.ingredients}}</span><br/><br/>
+         {% if recipe.stars %}  
+            <span class="heading"><strong style="color:  #db453d;">Star Rating</strong></span><br>
+            <span class="fa fa-star {% if (recipe.stars|int) >= 1 %}checked{% endif %}"></span>
+            <span class="fa fa-star {% if (recipe.stars|int) >= 2 %}checked{% endif %}"></span>
+            <span class="fa fa-star {% if (recipe.stars|int) >= 3 %}checked{% endif %}"></span>
+            <span class="fa fa-star {% if (recipe.stars|int) >= 4 %}checked{% endif %}"></span>
+            <span class="fa fa-star {% if (recipe.stars|int) >= 5 %}checked{% endif %}"></span>
+            {% endif %}
+            <a href="{{url_for('editrecipe', recipeid=recipe._id)}}" class=" btn editrecipebtn">Edit</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    </font>
+</div>
+</body>
+</html>
+{% endblock %}

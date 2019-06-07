@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<html>
+<body style="color:white;">
+<div class="row headingtxt">
+    <h2>Add Recipe</h2>
+</div>
+
+<div class="row">
+    <form action="{{ url_for('insertrecipe') }}" method="POST" class="col s12" style="color: white;">
+        <div class="row">
+            <div class="input-field col s12">
+                <span class="material-icons prefix">room_service</span>
+                <select id="section" name="sectionname">
+                    <option class="choosesection" style="color:white;" value="" disabled selected>Choose Section</option>
+                    {% for section in add_sections %}
+                    <option value="{{section.sectionname}}">{{section.sectionname}}</option>
+                    {% endfor %}
+                </select>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <span class="material-icons prefix">fastfood</span>
+                <input class="white-text" id="recipename" name="recipename" type="text">
+                <label for="icon_prefix" style="color=white;">Recipe Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <span class="material-icons prefix">cake</span>
+                <input style="color=white;" id="ingredients" name="ingredients" type="text" class="validate">
+                <label for="icon_prefix" style="color=white;">Ingredients</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">timer</i>
+                <input id="cooking_time" name="cooking_time" type="text" class="validate">
+                <label for="icon_prefix">Cooking Time</label>
+            </div>
+        </div>
+                <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">image</i>
+                <input id="imgurl" name="imgurl" type="text" class="validate">
+                <label for="icon_prefix">Image URL</label>
+            </div>
+        </div> 
+            <div class="row">
+                <select id="stars" name="stars">
+                    <i class="material-icons prefix">grade</i>
+                    <option value="" disabled selected>Rate Dish</option>
+                    {% for i in range(6) %}
+                    <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        <div class="row allegerncheckbox col s12">
+            <div class="switch">
+                <label style="color: white;">
+                     <h6> This meal could contain allergies, please click on the information button to check allergies.</h6>
+                     <input id="allergens" value="allergies" name="allergens" type="checkbox" class="validate">
+                    <span class="lever fas fa-question-circle fa-2x"></span>
+
+                </label>
+            </div>
+        </div>       
+        
+        <div class="row">
+            <button class="btn  addrecipebtn" type="submit" name="action">Add Recipe
+
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+{% endblock %}
+
+
