@@ -56,9 +56,8 @@ in my code would show 'Salads' on the website instead off 'sectionname'. One of 
 recipe, as well as having the option to change the rating or adding a rating when adding a new recipe. One of the final features i added to this project is the 'recipe of the week', i had a
 lot of empty space on my homepage which was making the footer rise up. I did not liek the way the footer was not stuck to the bottom of the page so i decided to make a recipe of the week section where
 me as the adminstartor would change the recipe of the week weekly. This is a just an extra design feature to attract more users top my website. I also thought it was a good idea to add icons
-next to each input or checkbox fields to add a little more design to the pages as most of the website is data presented differently.
-
-
+next to each input or checkbox fields to add a little more design to the pages as most of the website is data presented differently. I decided near to submitting this project to not use the 
+search bar as i already had a sections dropdown which allowed the user to search for a recipe by its section name (e.g. 'Meat & Poultry').
 
 
 ## Features Left to Implement
@@ -106,8 +105,6 @@ https://mlab.com/welcome/
 
 
 ## Testing
-
-
 
 ### Add a recipe
 
@@ -158,25 +155,6 @@ https://mlab.com/welcome/
 4.	Verify this has redirected you to the specific section page.
 5.	Now Verify the recipe you just edited is listed.
 
-### Search by ingredients
-
-1.	When on the homepage, enter an ingredient in to the search bar and press the search button. (e.g. ‘Meat’)
-2.	Once pressed search, check you have a lists of results.
-3.  Once the list of results are showing, check all recipes have the ingredient in them.
-4.	Verify there is no recipes listed that do not include ‘Meat’.
-
-1.	When on the homepage, enter an integer in to the search bar and click the search button.
-2.	Once the search button has been clicked, verify an error message has now appeared.
-3.	Verify no results of recipes are showing.
-
-1.	When on the homepage, enter a string which is not an ingredient in to the search bar and then click the search button. (e.g. ‘Cat’)
-2.	Once pressed the search button, verify an error message has now appeared.
-3.	Verify no results of recipes are showing.
-
-1.	When on the homepage, enter several ingredients into the search bar and press the search button. (e.g. ‘Meat Fish Pepper Onions’)
-2.	Once pressed the search button, verify all recipes that include the searched ingredients are listed below.
-3.	Verify no recipes are showing that do not include one of the ingredients searched.
-
 ### Navigating through the dropdown section on the navbar
 
 1.	When on the homepage, click on the ‘Sections’ drop down and select one section.
@@ -204,6 +182,8 @@ https://mlab.com/welcome/
 
 ### Responsiveness
 
+I realised that i need to add some responsiveness to the website as it did not look how i wanted it too on a smaller screen size.
+
 #### Bugs/Errors
 
 One of the main issues i am having at the minute is not being able to add CSS to some of the materialize forms. There is a default colour on materialize and it comes up when you hover over parts of the
@@ -220,6 +200,19 @@ At the moment the search button does not work. The search bar does not redirect 
 
 
 ## Deployment
+
+HEROKU
+
+
+
+
+
+
+
+
+
+
+
 
 ## Credits
 

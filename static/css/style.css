@@ -5,7 +5,7 @@ body{
 
 .showrecipesbtn{
     font-family: 'Pacifico', cursive;
-    margin-left: 150px;
+    margin-left: auto !important;
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: #927d80;}
@@ -16,9 +16,12 @@ body{
 
 .homeimage{
     margin-top: 40px;
-    margin-left: 0px;
+    margin-left: auto !important;
+    margin-right: auto !important;
     margin-bottom: 40px;
     border: solid;
+    width: 460px;
+    height: 350px;
     border-width: 5px;
     border-color: #927d80;
 }
@@ -28,7 +31,8 @@ font-family: 'Pacifico', cursive;
     color:black;
     font-weight: 500;
     font-size: medium;
-    margin-left: 40px;
+text-align: center;
+
 }
 
 .recipename{
@@ -74,13 +78,49 @@ font-family: 'Pacifico', cursive;
     background-color: #927d80;
     height: 90px;
 }
-@media screen and (min-width: 550px) {
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+nav {
+    color: #fff;
+background-color: #927d80 ;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}
+@media only screen and (max-width: 668px) {
+  /* For mobile phones: */
+  [class*="container"] {
+    width: 90%;
   }
-  
+  [class*="headingtxt"]{
+  font-family: 'Pacifico', cursive;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+}
+@media only screen and (min-width: 669px max-width 999px) {
+  /* For mobile phones: */
+  [class*="container"] {
+    width: 70%;
+  }
+    [class*="headingtxt"]{
+  font-family: 'Pacifico', cursive;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+}
+@media only screen and (min-width: 1030px) {
+  /* For mobile phones: */
+  [class*="container"] {
+    width: 50%;
+  }
+    [class*="headingtxt"]{
+  font-family: 'Pacifico', cursive;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}}
 .checked {
   color: orange;
 }
@@ -114,6 +154,7 @@ font-family: 'Pacifico', cursive;
 
 .imgurl{
   float: right;
+  margin-top: 20px;
   margin-left: 220px;
   border: 5px solid;
   position: absolute;
@@ -123,7 +164,7 @@ font-family: 'Pacifico', cursive;
 
 
 .expmre{
-  margin-left: 250px;
+
 
 }
 
@@ -168,23 +209,6 @@ font-family: 'Pacifico', cursive;
 
 
 
-.modal-content{
-    font-size: 18px;
-    font-family: 'Pacifico', cursive;
-    color:white;
-    background-color: #db453d;
-}
-.modal-close{
-    font-family: 'Pacifico', cursive;
-    background-color: #927d80;
-}
-.modal-footer{
-    background-color: yellow;
-}
-.modal-close:hover{
-      font-family: 'Pacifico', cursive;
-      background-color:  #db453d;
-}
 
 .validate{
     color: white;
@@ -269,7 +293,8 @@ input#imgurl:focus {
 .recipeofweektext{
     font-family: 'Pacifico', cursive;
     color:white;
-  
+    margin-left: auto !important;
+    margin-right: auto !important;
     width: 310px;
     text-align: center;
     margin-bottom: 40px;
@@ -283,7 +308,6 @@ input#imgurl:focus {
 	font-family: 'Pacifico', cursive;
 }
 
-}
 input[type=text]:not(.browser-default){
         border-bottom: 1px solid #db453d;
     box-shadow: 0 1px 0 0 #db453d;
@@ -360,6 +384,11 @@ input[type=text]:not(.browser-default){
     margin-left: 5px;
 }
 
+.recipeofweek2{
+   font-family: 'Pacifico', cursive;
+    color: white;
+    text-align: center;
+}
 
 @media screen and (min-width: 550px){
 .recipeofweek {
@@ -368,7 +397,6 @@ input[type=text]:not(.browser-default){
     background-color: white;
     width: 310px;
     text-align: center;
-    margin-left: 100px;
     margin-top: 40px;
     margin-bottom: 40px;
     border: solid;
@@ -380,6 +408,13 @@ input[type=text]:not(.browser-default){
 .recipeofweektext {
     font-family: 'Pacifico', cursive;
     text-align: center;
-    margin-left: 100px;
 
 }}
+
+.col.offset-s4 {
+    margin-left: 0px;}
+
+
+selectedrecipe:active {
+  background-color: yellow;
+} 

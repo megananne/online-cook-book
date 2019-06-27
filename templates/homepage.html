@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+
 {% extends 'base.html' %}
 {% block content %}
 
 
 <div class="row homeimage">
-    <div class="col offset-s4 material-placeholder">
-<img class="materialboxed initialized" width="450" src="static/images/homeimg2.JPG">
+  
+<img width="450" src="static/images/homeimg2.JPG">
 </div>
+    <div style=" text-align: center;">
 
-</div>
 <a class="waves-effect  btn showrecipesbtn" href="{{url_for('getrecipes')}}">Show Recipes</a>
 
-
+</div>
 
 
 <div class=" row recipeofweektext">
@@ -22,10 +22,12 @@
    
             
         </div>
-        <h4>Mozzarella & Portobello Mushroom Burger</h4>
+        
     </div>
+    <div class="recipeofweek2">
+    <h4>Mozzarella & Portobello </br>Mushroom Burger</h4>
 </div>
-
+</div>
 
 
 {% endblock %}

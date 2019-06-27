@@ -8,27 +8,27 @@
 </div>
 
 
-<div class="row col-md-6">
+<div class="row grid-example offset-s2 col s8">
     <font size="3">
-    <ul class="collapsible" data-collapsible="accordion">
+    <ul class="collapsible" data-collapsible="accordion" style="border:none;">
         {% for recipe in recipes %}
         <li>
-            <div class="collapsible-header col-md-6" margin-left="200">
-                <div class="col-md-6">
-                    <form action="{{url_for('deleterecipe', recipeid=recipe._id)}}" method="POST">
-                        <label class="recipesectionname"><strong>{{recipe.sectionname}} - </strong></label>
+            <div class="collapsible-header grid-example offset-s2 col s8 selectedrecipe" margin-left="200">
+                <div class="grid-example offset-s2 col s8 ">
+                    <form action="{{url_for('deleterecipe', recipeid=recipe._id)}}" method="POST" style="text-align:center;">
+                        <label class="recipesectionname"><strong>{{recipe.sectionname}} - </strong></label><br><br>
                         <label class="recipename">{{recipe.name}} </label><i class="material-icons expmre">expand_more</i>
                     </form>
                    
                 </div>
 
             </div>
-            <div class="collapsible-body recipestext" style="display: block;background-color: white;">
+            <div class="collapsible-body grid-example offset-s2 col s8 recipestext" style="display: block;background-color: white;">
                 <div class="col s2">
                     <img class="materialboxed imgurl" width="200" border="5" float="right" src="{{recipe.imgurl}}">
                 </div>
                 <br/>
-                <span><h6><strong style="color:  #db453d;">Recipe Name</strong></h6>{{recipe.name}}<h6><strong style="color:  #db453d;"><br><br/>Cooking Time</strong></h6>{{recipe.cooking_time}}<br><br/><h6><strong style="color:  #db453d;">Allergies</strong></h6>{{recipe.allergens}}<br><br/><h6><strong style="color:  #db453d;">Ingredients</strong></h6>{{recipe.ingredients}}</span><br/><br/>
+                <span><h6 style="margin-top: 80px;"><strong style="color:  #db453d;" "margin-top: 80px;">Recipe Name</strong></h6>{{recipe.name}}<h6><strong style="color:  #db453d;"><br><br/>Cooking Time</strong></h6>{{recipe.cooking_time}}<br><br/><h6><strong style="color:  #db453d;">Allergies</strong></h6>{{recipe.allergens}}<br><br/><h6><strong style="color:  #db453d;">Ingredients</strong></h6>{{recipe.ingredients}}</span><br/><br/>
          {% if recipe.stars %}  
             <span class="heading"><strong style="color:  #db453d;">Star Rating</strong></span><br>
             <span class="fa fa-star {% if (recipe.stars|int) >= 1 %}checked{% endif %}"></span>
