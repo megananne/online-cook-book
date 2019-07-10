@@ -73,9 +73,6 @@ search bar as i already had a sections dropdown which allowed the user to search
 * HTML
 * CSS - this is used for styling the website
 * Django
-
-
-
 * JavaScript
 
 
@@ -91,7 +88,7 @@ https://materializecss.com/
     
 * Font Awesome
 
-
+https://fontawesome.com/
 
 * Bootsrap
 
@@ -180,11 +177,16 @@ https://mlab.com/welcome/
 1.	On the right side of the navbar, there is the home button which is the knife and fork icon. When on a different page, click on the homepage button.
 2.	Verify this redirects you to the homepage.
 
-### Responsiveness
+## Responsiveness
 
-I realised that i need to add some responsiveness to the website as it did not look how i wanted it too on a smaller screen size.
+I realised that i need to add some responsiveness to the website as it did not look how i wanted it too on a smaller screen size. I wanted the nav bar to fit the screen no matter what the screen size is.
+I also wanted the recipes to fit the screen size too. I wanted bigger margins on the larger screen sizes and smaller margins on the small screens. This way the text would be clearer and more obviious to read.
+I found doing the media queries harder when it came to do the recipes as i had so many differnet features inside the recipe and each feature was a different size so i had to really think about how i would do the 
+responsiveness. I decided that i was happy with the responsiveness of the online cook book when all recipes and images looked good on all screens. I also wanted it to centralized which when i finished messing
+around with the responsivness of the site it seemed to look a lot more central which i found looked better.
 
-#### Bugs/Errors
+
+## Bugs/Errors
 
 One of the main issues i am having at the minute is not being able to add CSS to some of the materialize forms. There is a default colour on materialize and it comes up when you hover over parts of the
 form. I want to sort this out so the hover colours are not the default colours. The colours should be one of the colours from the colour scheme i choose for the website. I also want to change the font of
@@ -202,19 +204,10 @@ At the moment the search button does not work. The search bar does not redirect 
 ## Deployment
 
 HEROKU
-
-
-
-
-
-
-
-
-
-
+GITHUB
 
 
 ## Credits
 
 * Images and URL's came from Google Images
-* 
+* Recipes are either made up or came from Google and sites such as BBC Food and James Oliver's Recipe's.

@@ -46,6 +46,7 @@ font-family: 'Pacifico', cursive;
     background-color: #927d80;
     margin-top:5px;
     margin-left:150px;
+    margin-bottom: 15px;
 }
 
 .editrecipebtn:hover{
@@ -182,7 +183,8 @@ background-color: #927d80 ;
 
 .addrecipebtn{
    font-family: 'Pacifico', cursive;
-    margin-left: 200px;
+    margin-left: 250px;
+    margin-bottom: 15px;
     background-color: #927d80;
     
 }

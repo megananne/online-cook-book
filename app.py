@@ -39,19 +39,15 @@ def insertrecipe():
 
 @app.route('/editrecipe/<recipeid>')
 def editrecipe(recipeid):
+    sections = []
+    add_sections = []
     therecipe = mongo.db.recipes.find_one({'_id': ObjectId(recipeid)})
     allsections = mongo.db.sections.find()
+    for section in allsections:
+        sections.append(section)
+        add_sections.append(section)
     return render_template(
-        'editrecipe.html', recipe=therecipe, sections=allsections)
-
-
-
-
-
-
-
-
-
+        'editrecipe.html', recipe=therecipe, sections=add_sections)
 
 
 @app.route('/changerecipe/<recipeid>', methods=['POST'])
@@ -59,9 +55,9 @@ def changerecipe(recipeid):
     mongo.db.recipes.update(
         {'_id': ObjectId(recipeid)},
         {
-            'recipename': request.form.get('task_name'),
+            'recipename': request.form.get('recipename'),
             'sectionname': request.form.get('sectionname'),
-            'recipeingredients': request.form.get('recipeingredients'),
+            'recipeingredients': request.form.get('ingredients'),
             'allergens': request.form.get('allergens'),
             'cooking_time': request.form.get('cooking_time'),
         })
