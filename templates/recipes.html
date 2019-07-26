@@ -17,7 +17,7 @@
                 <div class="grid-example offset-s2 col s8 ">
                     <form action="{{url_for('deleterecipe', recipeid=recipe._id)}}" method="POST" style="text-align:center;">
                         <label class="recipesectionname"><strong>{{recipe.sectionname}} - </strong></label><br><br>
-                        <label class="recipename">{{recipe.name}} </label><i class="material-icons expmre">expand_more</i>
+                        <label class="recipename">{{recipe.recipename}} </label><i class="material-icons expmre">expand_more</i>
                     </form>
                    
                 </div>
@@ -28,7 +28,13 @@
                     <img class="materialboxed imgurl" width="200" border="5" float="right" src="{{recipe.imgurl}}">
                 </div>
                 <br/>
-                <span><h6 style="margin-top: 80px;"><strong style="color:  #db453d;" "margin-top: 80px;">Recipe Name</strong></h6>{{recipe.name}}<h6><strong style="color:  #db453d;"><br><br/>Cooking Time</strong></h6>{{recipe.cooking_time}}<br><br/><h6><strong style="color:  #db453d;">Allergies</strong></h6>{{recipe.allergens}}<br><br/><h6><strong style="color:  #db453d;">Ingredients</strong></h6>{{recipe.ingredients}}</span><br/><br/>
+                <span><h6 style="margin-top: 80px;"><strong style="color:  #db453d;" "margin-top: 80px;">Recipe Name</strong></h6>{{recipe.recipename}}<h6><strong style="color:  #db453d;"><br><br/>Cooking Time</strong></h6>{{recipe.cooking_time}}<br><br/><h6><strong style="color:  #db453d;">Allergies</strong></h6>{{recipe.allergens}}<br>
+
+            <i class="material-icons prefix">info</i>
+            <div class="tooltip" "margin-top: 80px;">This meal could contain allergies.
+            <span class="tooltiptext">Please be advised that some of the recipes included in this cookbook may contain these ingredients: Milk, Eggs, Wheat, Soybeans, Peanuts, Tree Nuts, Fish and ShellFish</span>
+
+                <br/><h6 "margin-top: 80px;"><strong style="color:  #db453d;">Ingredients</strong></h6>{{recipe.ingredients}}</span><br/><br/>
          {% if recipe.stars %}  
             <span class="heading"><strong style="color:  #db453d;">Star Rating</strong></span><br>
             <span class="fa fa-star {% if (recipe.stars|int) >= 1 %}checked{% endif %}"></span>
