@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
 </head>
 <body>
-  <header>
+  <!---<header>
     <nav>
       <div class="nav-wrapper">
         <a href="{{url_for('homepage')}}"><i class="material-icons iconsnav restraunticon right">restaurant</i></a>
@@ -34,14 +34,36 @@
       </ul>
     </div>
   </nav>
-</header>
-
+</header> --->
+<header>
+ <nav>
+    <div class="nav-wrapper">
+      <a href="{{url_for('homepage')}}"><i class="material-icons iconsnav restraunticon right">restaurant</i></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{url_for('homepage')}}" style="font-size: 18px">Home</a></li>
+        <li><a href="{{url_for('addrecipe')}}" style="font-size: 18px">Add Recipe</a></li>
+        <li><a class="dropdown-trigger" href="#!" role="button" data-activates="dropdown" data-target="#" style="font-size: 18px">Sections<i class="material-icons iconsnav right">arrow_drop_down</i></a></li>
+      </ul>
+        <ul id="dropdown" class="dropdown-content">
+        {% for section in sections %}
+        <li><a href="{{ url_for('search', sectionname=section.sectionname) }} ">{{ section.sectionname }}</a></li>
+        {% endfor %}
+        </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="{{url_for('homepage')}}" style="font-size: 18px">Home</a></li>
+        <li><a href="{{url_for('addrecipe')}}" style="font-size: 18px">Add Recipe</a></li>
+        <li><a class="dropdown-trigger" href="#!" role="button" data-activates="dropdown" data-target="#" style="font-size: 18px">Sections<i class="material-icons iconsnav right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+    </header>      
     
    <div class="container" style="">
         {% block content %} {% endblock %}
     </div>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script type="text/javascript">
@@ -54,6 +76,7 @@
       $('.dropdown-trigger').dropdown();
       $('select').material_select();
       $('.modal').modal();
+      $(".button-collapse").sideNav();
 });
 
  

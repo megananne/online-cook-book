@@ -8,7 +8,7 @@
             <div class="input-field col s12">
                 <span class="material-icons prefix">room_service</span>
                 <select id="section" name="sectionname">
-                    <option class="choosesection" style="color:white;" value="" disabled selected>Choose Section</option>
+                    <option class="choosesection" style="color:white;" value="" disabled selected>{{recipe.sectionname}}</option>
                     {% for section in sections %}
                     <option value="{{section.sectionname}}">{{section.sectionname}}</option>
                     {% endfor %}
@@ -47,7 +47,7 @@
             <div class="input-field col s12">
                 <i class="material-icons prefix">grade</i>
                 <select id="stars" name="stars">
-            <option value="" disabled selected>Rate Dish</option>
+            <option value="{{recipe.stars}}" disabled selected>{{recipe.stars}}</option>
                 {% for i in range(6) %}
                 <option value="{{i}}">{{i}}</option>
                 {% endfor %}

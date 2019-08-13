@@ -57,9 +57,10 @@ def changerecipe(recipeid):
         {
             'recipename': request.form.get('recipename'),
             'sectionname': request.form.get('sectionname'),
-            'recipeingredients': request.form.get('ingredients'),
+            'ingredients': request.form.get('ingredients'),
             'imgurl': request.form.get('imgurl'),
             'cooking_time': request.form.get('cooking_time'),
+            'stars': request.form.get('stars'),
         })
     return redirect(url_for('getrecipes'))
 
