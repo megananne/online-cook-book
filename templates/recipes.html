@@ -8,23 +8,23 @@
 
 <div class="row grid-example ">
 
-        <ul class="collapsible" data-collapsible="accordion" style="border:none;">
-            {% for recipe in recipes %}
-            <li>
-                <div class="collapsible-header grid-example offset-s2 col s8 selectedrecipe" margin-left="200">
-                    <div class="grid-example offset-s2 col s8 ">
-                        <form action="{{url_for('deleterecipe', recipeid=recipe._id)}}" method="POST" style="text-align:center;">
-                            <label class="recipesectionname"><strong>{{recipe.sectionname}} - </strong></label><br><br>
-                            <label class="recipename">{{recipe.recipename}} </label><i class="material-icons expmre">expand_more</i>
-                        </form>
-
-                    </div>
+    <ul class="collapsible" data-collapsible="accordion" style="border:none;">
+        {% for recipe in recipes %}
+        <li>
+            <div class="collapsible-header grid-example offset-s2 col s8 selectedrecipe" margin-left="200">
+                <div class="grid-example offset-s2 col s8 ">
+                    <form action="{{url_for('deleterecipe', recipeid=recipe._id)}}" method="POST" style="text-align:center;">
+                        <label class="recipesectionname"><strong>{{recipe.sectionname}} - </strong></label><br><br>
+                        <label class="recipename">{{recipe.recipename}} </label><i class="material-icons expmre">expand_more</i>
+                    </form>
 
                 </div>
-                <div class="collapsible-body grid-example offset-s2 col s8 recipestext" style="display: block;background-color: white;">
 
-                    <img class="materialboxed imgurl" width="200" border="5" float="right" src="{{recipe.imgurl}}" style="margin-bottom: 20px;">
-                
+            </div>
+            <div class="collapsible-body grid-example offset-s2 col s8 recipestext" style="display: block;background-color: white;">
+
+                <img class="materialboxed imgurl" width="200" border="5" float="right" src="{{recipe.imgurl}}" style="margin-bottom: 20px;">
+
                 <br><br><br><br><br><br><br><br>
                 <span><h6 style="margin-top: 20px;"><strong style="color:  #db453d; margin-top: 80px;">Recipe Name</strong></h6>{{recipe.recipename}}<h6><strong style="color:  #db453d;"><br><br/>Cooking Time</strong></h6>{{recipe.cooking_time}}<br><br/><h6><strong style="color:  #db453d;">Allergies</strong></h6>{{recipe.allergens}}<br>
 
@@ -32,16 +32,17 @@
             This meal could contain allergies.
             <span class="tooltiptext">Please be advised that some of the recipes included in this cookbook may contain these ingredients: Milk, Eggs, Wheat, Soybeans, Peanuts, Tree Nuts, Fish and ShellFish</span></div>
 
-<br/>
-<h6 style="margin-top: 20px;"><strong style="color:  #db453d;">Ingredients</strong></h6>{{recipe.ingredients}}</span><br/><br/> {% if recipe.stars %}
-<span class="heading"><strong style="color:  #db453d;">Star Rating</strong></span><br>
-<span class="fa fa-star {% if (recipe.stars|int) >= 1 %}checked{% endif %}"></span>
-<span class="fa fa-star {% if (recipe.stars|int) >= 2 %}checked{% endif %}"></span>
-<span class="fa fa-star {% if (recipe.stars|int) >= 3 %}checked{% endif %}"></span>
-<span class="fa fa-star {% if (recipe.stars|int) >= 4 %}checked{% endif %}"></span>
-<span class="fa fa-star {% if (recipe.stars|int) >= 5 %}checked{% endif %}"></span> {% endif %}
-<a href="{{url_for('editrecipe', recipeid=recipe._id)}}" class=" btn editrecipebtn">Edit</a>
-</div></li>
+            <br/>
+            <h6 style="margin-top: 20px;"><strong style="color:  #db453d;">Ingredients</strong></h6>{{recipe.ingredients}}</span><br/><br/> {% if recipe.stars %}
+            <span class="heading"><strong style="color:  #db453d;">Star Rating</strong></span><br>
+            <span class="fa fa-star {% if (recipe.stars|int) >= 1 %}checked{% endif %}"></span>
+            <span class="fa fa-star {% if (recipe.stars|int) >= 2 %}checked{% endif %}"></span>
+            <span class="fa fa-star {% if (recipe.stars|int) >= 3 %}checked{% endif %}"></span>
+            <span class="fa fa-star {% if (recipe.stars|int) >= 4 %}checked{% endif %}"></span>
+            <span class="fa fa-star {% if (recipe.stars|int) >= 5 %}checked{% endif %}"></span> {% endif %}
+            <a href="{{url_for('editrecipe', recipeid=recipe._id)}}" class=" btn editrecipebtn">Edit</a>
+</div>
+</li>
 {% endfor %}
 </ul>
 </div>

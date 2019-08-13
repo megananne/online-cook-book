@@ -1,30 +1,28 @@
-
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 
 <div class="row homeimage">
-  
-<img width="450" src="static/images/homeimg2.JPG">
-</div>
-    <div style=" text-align: center;">
 
-<a class="waves-effect  btn showrecipesbtn" href="{{url_for('getrecipes')}}">Show Recipes</a>
+    <img width="450" src="static/images/homeimg2.JPG">
+</div>
+<div style=" text-align: center;">
+
+    <a class="waves-effect  btn showrecipesbtn" href="{{url_for('getrecipes')}}">Show Recipes</a>
 
 </div>
 
 
 <div class=" row recipeofweektext">
-<h4> Recipe of the Week</h4>
-<div class="col-lg-12 recipeofweek">
-    
-    <img class="materialboxed" width="300" height="300" src="static/images/recipeofweek1.jpg">
-   
-            
-        </div>
-        
+    <h4> Recipe of the Week</h4>
+    <div class="col-lg-12 recipeofweek">
+
+        <img class="materialboxed homeimg" width="300" height="300" src="static/images/recipeofweek1.jpg">
+
+
     </div>
-    <div class="recipeofweek2">
+
+</div>
+<div class="recipeofweek2">
     <h4>Mozzarella & Portobello </br>Mushroom Burger</h4>
 </div>
 </div>

@@ -1,6 +1,4 @@
-
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="row headingtxt">
     <h2>Add Recipe</h2>
@@ -30,7 +28,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <span class="material-icons prefix">cake</span>
-                <input class="white-text"  style="color=white;" id="ingredients" name="ingredients" type="text" required>
+                <input style="color=white;" id="ingredients" name="ingredients" type="text" class="validate" required>
                 <label for="icon_prefix" style="color=white;">Ingredients</label>
             </div>
         </div>
@@ -41,16 +39,16 @@
                 <label for="icon_prefix">Cooking Time</label>
             </div>
         </div>
-                <div class="row">
+        <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">image</i>
                 <input id="imgurl" name="imgurl" type="text" class="validate" required>
-                <label for="imgurl">Image URL</label>
+                <label for="icon_prefix">Image URL</label>
             </div>
-        </div> 
-            <div class="row"> 
-            <div class="input-field col s12">            
-            <i class="material-icons prefix">grade</i>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">grade</i>
                 <select id="stars" name="stars">
                    
                     <option value="" disabled selected>Rate Dish</option>
@@ -59,24 +57,22 @@
                     {% endfor %}
                 </select>
             </div>
-            </div>
-        <div class="row">
-        <div class="input-field col s12" >
-            <i class="material-icons prefix">info</i>
-            <div class="tooltip">This meal could contain allergies.
-            <span class="tooltiptext">Please be advised that some of the recipes included in this cookbook may contain these ingredients: Milk, Eggs, Wheat, Soybeans, Peanuts, Tree Nuts, Fish and ShellFish</span>
         </div>
-        </div> 
-        
         <div class="row">
-            <button class="btn  addrecipebtn" type="submit" name="action">Add Recipe
+            <div class="input-field col s12">
+                <i class="material-icons prefix">info</i>
+                <div class="tooltip">This meal could contain allergies.
+                    <span class="tooltiptext">Please be advised that some of the recipes included in this cookbook may contain these ingredients: Milk, Eggs, Wheat, Soybeans, Peanuts, Tree Nuts, Fish and ShellFish</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <button class="btn  addrecipebtn" type="submit" name="action">Add Recipe
 
             </button>
-        </div>
+            </div>
     </form>
-</div>
+    </div>
 
 
-{% endblock %}
-
-
+    {% endblock %}

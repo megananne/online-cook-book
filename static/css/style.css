@@ -1,61 +1,75 @@
-body{
-  background-color: #d3a7a0
+body {
+    background-color: #d3a7a0
 }
 
-    
- /* navbar */   
-    
+
+/* navbar */
 
 nav {
     color: #fff;
-background-color: #927d80 ;
+    background-color: #927d80;
     width: 100%;
     height: 56px;
     line-height: 56px;
 }
 
-.iconsnav{
+.iconsnav {
     color: white;
 }
 
-.nav-wrapper{
+.nav-wrapper {
     font-size: 89px;
     font-family: 'Pacifico', cursive;
     background-color: #927d80;
 }
-    
+
 /* social media icons */
-.fa-twitter{
+
+.fa-twitter {
     margin-left: 5px;
     color: white;
     float: right;
     font-size: 20px;
 }
-.fa-instagram{
+
+.fa-instagram {
     color: white;
     float: right;
     margin-left: 5px;
     font-size: 20px;
 }
-.fa-facebook{
-    float:right;
+
+.fa-facebook {
+    float: right;
     color: white;
     font-size: 20px;
     margin-left: 5px;
 }
+
+nav,
+nav .nav-wrapper i,
+nav a.button-collapse,
+nav a.button-collapse i {
+    color: white;
+}
+
+.side-nav li>a {
+    color: red;
+}
+
 /* ------------------------ */
 
 /* home page */
 
-
 /* recipe of the week headings */
-.recipeofweek2{
-   font-family: 'Pacifico', cursive;
+
+.recipeofweek2 {
+    font-family: 'Pacifico', cursive;
     color: white;
     text-align: center;
 }
 
-.homeimage{
+.homeimage {
     margin-top: 40px;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -67,28 +81,29 @@ background-color: #927d80 ;
     border-color: #927d80;
 }
 
-.headingtxt{
-  font-family: 'Pacifico', cursive;
-  margin-top: 20px;
-  color: white;
-  text-align: center;
+.headingtxt {
+    font-family: 'Pacifico', cursive;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
 }
 
-.showrecipesbtn{
+.showrecipesbtn {
     font-family: 'Pacifico', cursive;
     margin-left: auto !important;
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: #927d80;
 }
-.showrecipesbtn:hover{
+
+.showrecipesbtn:hover {
     background-color: #db453d;
 }
 
 
-.recipeofweek{
+.recipeofweek {
     font-family: 'Pacifico', cursive;
-    color:#db453d;
+    color: #db453d;
     background-color: white;
     width: 310px;
     text-align: center;
@@ -98,11 +113,11 @@ background-color: #927d80 ;
     padding-left: 0px;
     border-color: #927d80;
     border-width: 5px;
-}  
+}
 
-.recipeofweektext{
+.recipeofweektext {
     font-family: 'Pacifico', cursive;
-    color:white;
+    color: white;
     margin-left: auto !important;
     margin-right: auto !important;
     width: 310px;
@@ -110,91 +125,100 @@ background-color: #927d80 ;
     margin-bottom: 40px;
 
 }
+
 /* -------------------------- */
-
-
 
 /* add recipe page */
 
-
-.addrecipebtn{
-   font-family: 'Pacifico', cursive;
+.addrecipebtn {
+    font-family: 'Pacifico', cursive;
     margin-left: 260px;
     margin-bottom: 15px;
     background-color: #927d80;
 }
-.addrecipebtn:hover{
-  background-color:  #db453d;
+
+.addrecipebtn:hover {
+    background-color: #db453d;
 }
 
-.imgurl{
-  float: right;
-  margin-top: 20px;
+.imgurl {
+    float: right;
+    margin-top: 20px;
 
-  border: 5px solid;
-  position: absolute;
-  border-color: grey;
-  padding: 5px;
+    border: 5px solid;
+    position: absolute;
+    border-color: grey;
+    padding: 5px;
 }
 
 /* edit recipe page */
 
-
-
 /* edit recipe button */
-.editrecipebtn{
+
+.editrecipebtn {
     font-family: 'Pacifico', cursive;
     background-color: #927d80;
-    margin-top:5px;
-    margin-left:150px;
+    margin-top: 5px;
+    margin-left: 150px;
     margin-bottom: 15px;
 }
-.editrecipebtn:hover{
+
+.editrecipebtn:hover {
     background-color: #db453d;
 }
 
 /* save changes button */
-.savechangesbtn{
+
+.savechangesbtn {
     font-family: 'Pacifico', cursive;
     background-color: #927d80;
-    margin-top:5px;
-    margin-left:150px;
+    margin-top: 5px;
+    margin-left: 350px;
 }
-.savechangesbtn:hover{
+
+.savechangesbtn:hover {
     background-color: #db453d;
     margin-left: 150px;
 
 }
 
 /* user editing the recipe */
+
 input#recipename {
     border-bottom: 1px solid #db453d;
     box-shadow: 0 1px 0 0 #db453d;
 }
+
 input#recipename:focus {
     border-bottom: 1px solid #db453d;
-    box-shadow:  0 1px 0 0 #db453d;
+    box-shadow: 0 1px 0 0 #db453d;
 }
+
 input#ingredients {
     border-bottom: 1px solid #db453d;
     box-shadow: 0 1px 0 0 #db453d;
 }
+
 input#ingredients:focus {
     border-bottom: 1px solid #db453d;
-    box-shadow:  0 1px 0 0 #db453d;
+    box-shadow: 0 1px 0 0 #db453d;
 }
+
 input#cooking_time {
     border-bottom: 1px solid #db453d;
-    box-shadow:  0 1px 0 0 #db453d;
+    box-shadow: 0 1px 0 0 #db453d;
 }
+
 input#cooking_time:focus {
     border-bottom: 1px solid #db453d;
-    box-shadow:  0 1px 0 0 #db453d;
+    box-shadow: 0 1px 0 0 #db453d;
 }
+
 input#imgurl {
     border-bottom: 1px solid #db453d;
     box-shadow: 0 1px 0 0 #db453d;
 }
+
 input#imgurl:focus {
     border-bottom: 1px solid #db453d;
     box-shadow: 0 1px 0 0 #db453d;
@@ -202,34 +226,35 @@ input#imgurl:focus {
 
 /* -------------------------- */
 
-
 /* recipes */
 
-
-.imgurl{
-  float: right;
-  margin-top: 20px;
-  display: block;
-  border: 5px solid;
-  clear: both;
-  border-color: grey;
-  padding: 5px;
+.imgurl {
+    float: right;
+    margin-top: 20px;
+    display: block;
+    border: 5px solid;
+    clear: both;
+    border-color: grey;
+    padding: 5px;
 }
 
 /* star rating */
+
 .checked {
-  color: orange;
+    color: orange;
 }
 
 
-.dropdown-content li>a, .dropdown-content li>span {
-	color:red;
-	font-family: 'Pacifico', cursive;
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: red;
+    font-family: 'Pacifico', cursive;
 }
 
 /* Tooltip container */
+
 .tooltip {
-   
+    margin-left: 40px;
     padding-bottom: 10px;
     position: relative;
     display: inline-block;
@@ -237,79 +262,82 @@ input#imgurl:focus {
 }
 
 /* Tooltip text */
+
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 180px;
-  background-color: #927d80;
-  color: #fff;  
-  text-align: center;
-  margin-bottom: 5px;
-  padding: 10px;
-  border-radius: 6px;
+    visibility: hidden;
+    width: 180px;
+    background-color: #927d80;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 6px;
 
-  /* Position the tooltip text */
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
 
-  /* Fade in tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 /* Tooltip arrow */
+
 .tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
+
 .tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
-.allegerncheckbox{
+.allegerncheckbox {
     margin-left: 3rem;
 }
 
-.restraunticon{
-  margin-right: 20px;
-  width: 50px;
-  height: 50px;
+.restraunticon {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
 }
 
-.recipesectionname{
-font-family: 'Pacifico', cursive;
-    color:black;
+.recipesectionname {
+    font-family: 'Pacifico', cursive;
+    color: black;
     font-weight: 500;
     font-size: medium;
-text-align: center;
+    text-align: center;
 
 }
 
-.recipename{
-font-family: 'Pacifico', cursive;
+.recipename {
+    font-family: 'Pacifico', cursive;
     font-size: medium;
     color: #db453d;
 }
 
-.dropdown-content li>a, .dropdown-content li>span {
-	color:red;
-	font-family: 'Pacifico', cursive;
+.dropdown-content li>a,
+.dropdown-content li>span {
+    color: red;
+    font-family: 'Pacifico', cursive;
 }
-/* ------------------------------------ */
 
+/* ------------------------------------ */
 
 /* footer */
 
-
-.footer{
+.footer {
     width: 100%;
     position: relative;
     padding-left: 20px;
@@ -322,72 +350,106 @@ font-family: 'Pacifico', cursive;
 }
 
 /* social media icons */
-.fa-twitter{
+
+.fa-twitter {
     margin-left: 5px;
     color: white;
     float: right;
     font-size: 20px;
 }
-.fa-instagram{
+
+.fa-instagram {
     color: white;
     float: right;
     margin-left: 5px;
     font-size: 20px;
 }
-.fa-facebook{
-    float:right;
+
+.fa-facebook {
+    float: right;
     color: white;
     font-size: 20px;
     margin-left: 5px;
 }
+
 /* ------------------------ */
 
-
-
-
-
-
-
-.recipestext{
-  font-family: 'Pacifico', cursive;
+.recipestext {
+    font-family: 'Pacifico', cursive;
 }
 
-.validate{
+.validate {
     color: white;
 }
 
-.choosesection{
+.choosesection {
     color: red;
 }
 
 .input-field label {
 
-color: white; }
+    color: white;
+}
 
 .select-wrapper input.select-dropdown {
 
-border-bottom: 1px solid #db453d; }
+    border-bottom: 1px solid #db453d;
+}
 
 .select-wrapper input.select-dropdown:focus {
 
-border-bottom: 1px solid #db453d; }
+    border-bottom: 1px solid #db453d;
+}
 
-.material-icons{
-    color:  #927d80;
+.material-icons {
+    color: #927d80;
 }
 
 
-input[type=text]:not(.browser-default){
-        border-bottom: 1px solid #db453d;
+input[type=text]:not(.browser-default) {
+    border-bottom: 1px solid #db453d;
     box-shadow: 0 1px 0 0 #db453d;
 }
 
 .col.offset-s4 {
-    margin-left: 0px;}
+    margin-left: 0px;
+}
 
 
 @media (min-width: 750px) {
-    .imgurl{
+    .imgurl {
         margin-left: 220px;
+    }
+}
+
+@media (max-width: 749px) {
+    .addrecipebtn {
+        margin-left: 120px;
+    }
+    .editrecipebtn {
+        margin-left: 55px;
+    }
+    .savechangesbtn {
+        margin-left: 90px;
+    }
+    img {
+        width: 290px;
+    }
+    .homeimage {
+        width: 300px;
+        height: 230px;
+    }
+    .homeimg {
+        width: 280px;
+    }
+    .recipeofweek {
+        width: 290px;
+    }
+    .footer {
+        width: auto;
+    }
+    .imgurl {
+        width: 240px;
+        height: 150px;
     }
 }
