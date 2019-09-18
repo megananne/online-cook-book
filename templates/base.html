@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="title" content="Megan's Online CookBook">
   <meta name="description" content="This is an online recipe book which the users can add and edit recipes. The website has ingredients and images of recipes.">
-  <meta name="keywords" content="HTML,CSS,Python,JavaScript">
+  <meta name="keywords" content="HTML,CSS,Python,JavaScript,Django">
   <meta name="author" content="Megan Smith">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,29 +21,49 @@
 
 <body>
 
-  <header>
+ <header>
+  <nav><ul id="dropdown1" class="dropdown-content">
+       
+      {% for section in sections %}
+          <li><a href="{{ url_for('search', sectionname=section.sectionname) }} ">{{ section.sectionname }}</a></li>
+          {% endfor %}
+    </ul>
+    <ul id="mobile-dropdown" class="dropdown-content">
+       {% for section in sections1 %}
+          <li><a href="{{ url_for('search', sectionname=section.sectionname) }} ">{{ section.sectionname }}</a></li>
+          {% endfor %}
+    </ul>
     <nav>
       <div class="nav-wrapper">
         <a href="{{url_for('homepage')}}"><i class="material-icons iconsnav restraunticon right">restaurant</i></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"
+          ><i class="material-icons">menu</i></a
+        >
         <ul class="right hide-on-med-and-down">
-          <li><a href="{{url_for('homepage')}}" style="font-size: 18px">Home</a></li>
+             <li><a href="{{url_for('homepage')}}" style="font-size: 18px">Home</a></li>
           <li><a href="{{url_for('addrecipe')}}" style="font-size: 18px">Add Recipe</a></li>
-          <li><a class="dropdown-trigger" href="#!" role="button" data-activates="dropdown" data-target="#" style="font-size: 18px">Sections<i class="material-icons iconsnav right">arrow_drop_down</i></a></li>
-        </ul>
-        <ul id="dropdown" class="dropdown-content">
-          {% for section in sections %}
-          <li><a href="{{ url_for('search', sectionname=section.sectionname) }} ">{{ section.sectionname }}</a></li>
-          {% endfor %}
+          <li>
+            <a class="dropdown-button" href="#!" data-activates="dropdown1">Sections<i class="material-icons right">arrow_drop_down</i></a
+            >
+          </li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="{{url_for('homepage')}}" style="font-size: 18px">Home</a></li>
           <li><a href="{{url_for('addrecipe')}}" style="font-size: 18px">Add Recipe</a></li>
-          <li><a class="dropdown-trigger" href="#!" role="button" data-activates="dropdown" data-target="#" style="font-size: 18px">Sections<i class="material-icons iconsnav right">arrow_drop_down</i></a></li>
+          <li>
+            <a
+              class="dropdown-button"
+              href="#!"
+              data-activates="mobile-dropdown"
+              >Sections<i class="material-icons right">arrow_drop_down</i></a
+            >
+          </li>
         </ul>
       </div>
     </nav>
   </header>
+
+  
 
   <div class="container" style="">
     {% block content %} {% endblock %}
@@ -54,8 +74,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script type="text/javascript">
     $('document').ready(function() {
+      $(".dropdown-trigger").dropdown();
       $('.collapsible').collapsible();
-      $('.dropdown-trigger').dropdown();
       $('select').material_select();
       $('.modal').modal();
       $(".button-collapse").sideNav();

@@ -12,10 +12,10 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def homepage():
-    return render_template("homepage.html", sections=mongo.db.sections.find())
+    return render_template("homepage.html", sections=mongo.db.sections.find(), sections1=mongo.db.sections.find())
 @app.route('/getrecipes')
 def getrecipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find(), sections=mongo.db.sections.find())
+    return render_template("recipes.html", recipes=mongo.db.recipes.find(), sections=mongo.db.sections.find(), sections1=mongo.db.sections.find())
 
 @app.route('/addrecipe')
 def addrecipe():
@@ -47,7 +47,7 @@ def editrecipe(recipeid):
         sections.append(section)
         add_sections.append(section)
     return render_template(
-        'editrecipe.html', recipe=therecipe, sections=add_sections)
+        'editrecipe.html', recipe=therecipe, sections=add_sections, sections1=allsections)
 
 
 @app.route('/changerecipe/<recipeid>', methods=['POST'])
@@ -74,14 +74,14 @@ def deleterecipe(recipeid):
 @app.route('/getsections')
 def getsections():
     return render_template('sections.html',
-                           sections=mongo.db.sections.find())
+                           sections=mongo.db.sections.find(), sections1=mongo.db.sections.find())
 
 
 @app.route('/editsection/<sectionid>')
 def editsection(sectionid):
     thesection = mongo.db.categories.find_one(
         {'_id': ObjectId(sectionid)})
-    return render_template('editsection.html', section=thesection, sections=mongo.db.sections.find())
+    return render_template('editsection.html', section=thesection, sections=mongo.db.sections.find(), sections1=mongo.db.sections.find())
 
 
 @app.route('/changesection/<sectionid>', methods=['POST'])
@@ -107,16 +107,16 @@ def insertsection():
 
 @app.route('/addsection')
 def addsection():
-    return render_template('addsection.html', sections=mongo.db.sections.find())
+    return render_template('addsection.html', sections=mongo.db.sections.find(), sections1=mongo.db.sections.find())
 
 @app.route('/search/<sectionname>')
 def search(sectionname):
-    return render_template("recipes.html", sections=mongo.db.sections.find(), recipes=mongo.db.recipes.find({"sectionname": sectionname}), sectionname=sectionname)
+    return render_template("recipes.html", sections=mongo.db.sections.find(), sections1=mongo.db.sections.find(), recipes=mongo.db.recipes.find({"sectionname": sectionname}), sectionname=sectionname)
 
 @app.route('/searchresults/<recipeingredients>', methods=['POST'])
 def searchresults(recipeingredients):
     recipeingredients=request.form.to_dict()
-    return render_template("results.html", ingredients=mongo.db.sections.find(), recipes=mongo.db.recipes.find({"recipeingredients": recipeingredients}),recipeingredients=recipeingredients)    
+    return render_template("results.html", ingredients=mongo.db.sections.find(), recipes=mongo.db.recipes.find({"recipeingredients": recipeingredients}),recipeingredients=recipeingredients, sections=mongo.db.sections.find(), sections1=mongo.db.sections.find())    
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(os.environ.get('PORT')), debug=True)
